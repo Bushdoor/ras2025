@@ -1,11 +1,12 @@
 import RPi.GPIO as GPIO
 import time
 
+servo_pin = 12
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(servoPIN, GPIO.OUT)
-servoPIN = 12
-p = GPIO.PWM(servoPIN, 50) # GPIO 17 for PWM with 50Hz
-p.start(2.5) # Initialization
+GPIO.setup(servo_pin, GPIO.OUT)
+
+p = GPIO.PWM(servo_pin, 50)
+p.start(0)
 
 try:
 	while True:
